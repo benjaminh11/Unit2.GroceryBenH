@@ -15,7 +15,7 @@
  */
 function logNames(items) {
   items.forEach((item) => {
-    console.log(items.name);
+    console.log(item.name);
   });
 }
 
@@ -62,11 +62,23 @@ function getItemPriceByName(items, name) {
  * @returns {Item[]} array of items that belong to the given `category`
  */
 function getItemsByCategory(items, category) {
-  // TODO: use `filter`
+  // TODO: use`filter`;
+
   // const itemCat = items.filter((item) => {
   //   return item.category === category;
   // });
+
   // return itemCat;
+
+  // let itemsByCategory = items
+  //   .filter((item) => {
+  //     return category === item.category;
+  //   })
+  //   .map((item) => {
+  //     return item.name;
+  //   });
+  // return itemsByCategory;
+
   return items
     .filter((item) => item.category === category)
     .map((item) => item.name);
